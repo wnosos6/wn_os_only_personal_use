@@ -1,1 +1,2 @@
 # wn_os_only_personal_use
+个人自用，目前收录Aethersailor/Custom_OpenClash_Rules的Custom_Clash.ini，各个代理组实现自动选择。
