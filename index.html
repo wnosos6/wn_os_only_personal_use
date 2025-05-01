@@ -168,7 +168,8 @@
                 <span class="badge">Cohere</span>
                 <span class="badge">xAI</span>
                 <span class="badge">Mistral</span>
-                <span class="badge">GithubAI</span>
+                <span class="badge">Github</span>
+                <span class="badge">x666</span>
             </div>
             <div class="api-card">
                 <h3>部署区域</h3>
@@ -376,13 +377,41 @@ curl ${base_url}/mistral/v1/chat/completions \
             </div>
         </div>
 
-        <div class="api-section">
+        <div class="api-section"> <!-- Start of NEW x666 API section -->
+            <div class="api-header" onclick="toggleSection('x666')">
+                <h2>x666 API</h2>
+                <span>▼</span>
+            </div>
+            <div class="api-content" id="x666">
+                <p>支持 x666 API 服务。</p>
+                <h4>基础URL</h4>
+                <div class="code-block">
+                    <button class="copy-button" onclick="copyCode(this)">复制</button>
+                    <code class="endpoint-url">${base_url}/x666/v1/</code>
+                </div>
+                <h4>示例代码</h4>
+                <div class="code-block">
+                    <button class="copy-button" onclick="copyCode(this)">复制</button>
+                    <pre>
+curl ${base_url}/github/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $X666_API_KEY" \
+  -d '{
+    "model": "some-x666-model",
+    "messages": [{"role": "user", "content": "Hello from x666!"}],
+    "stream": true
+  }'</pre>
+                </div>
+            </div>
+        </div> <!-- End of NEW x666 API section -->
+
+        <div class="api-section"> <!-- Start of existing section (renamed to Github) -->
             <div class="api-header" onclick="toggleSection('github')">
                 <h2>Github API</h2>
                 <span>▼</span>
             </div>
             <div class="api-content" id="github">
-                <p>支持 <a href="https://ai.azure.com/github/model/docs" target="_blank">Github AI</a> 的各种模型。</p>
+                <p>支持 Github Copilot API 服务。</p>
                 <h4>基础URL</h4>
                 <div class="code-block">
                     <button class="copy-button" onclick="copyCode(this)">复制</button>
