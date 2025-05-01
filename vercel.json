@@ -29,6 +29,10 @@
             "dest": "https://api.cohere.ai/v1/$1"
         },
         {
+            "src": "/x666/v1/(.*)",
+            "dest": "https://x666.me/v1/$1"
+        },
+        {
             "src": "/xai/v1/(.*)",
             "dest": "https://api.x.ai/v1/$1"
         }
