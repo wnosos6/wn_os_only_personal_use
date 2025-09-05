@@ -5,22 +5,11 @@
 # 规则集提供者 / Rule Providers
 # 这里可以按需保留您需要的规则集，为了完整性，我暂时保留了之前版本的所有规则集
 rule-providers:
-  direct: {type: http, behavior: domain, url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt", path: ./ruleset/direct.yaml, interval: 86400}
-  proxy: {type: http, behavior: domain, url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt", path: ./ruleset/proxy.yaml, interval: 86400}
-  reject: {type: http, behavior: domain, url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/reject.txt", path: ./ruleset/reject.yaml, interval: 86400}
-  private: {type: http, behavior: domain, url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/private.txt", path: ./ruleset/private.yaml, interval: 86400}
-  apple: {type: http, behavior: domain, url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/apple.txt", path: ./ruleset/apple.yaml, interval: 86400}
-  google: {type: http, behavior: domain, url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/google.txt", path: ./ruleset/google.yaml, interval: 86400}
-  gfw: {type: http, behavior: domain, url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt", path: ./ruleset/gfw.yaml, interval: 86400}
-  telegramcidr: {type: http, behavior: ipcidr, url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/telegramcidr.txt", path: ./ruleset/telegramcidr.yaml, interval: 86400}
-  cncidr: {type: http, behavior: ipcidr, url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt", path: ./ruleset/cncidr.yaml, interval: 86400}
-  lancidr: {type: http, behavior: ipcidr, url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/lancidr.txt", path: ./ruleset/lancidr.yaml, interval: 86400}
-
   # 以下为 .ini 文件中引用的远程规则
-  Custom_Direct_Classical: {type: http, behavior: classical, url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Direct_Classical.yaml", path: ./ruleset/Custom_Direct_Classical.yaml, interval: 28800}
-  Custom_Proxy_Classical: {type: http, behavior: classical, url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Proxy_Classical.yaml", path: ./ruleset/Custom_Proxy_Classical.yaml, interval: 28800}
-  Steam_CDN_Classical: {type: http, behavior: classical, url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Steam_CDN_Classical.yaml", path: ./ruleset/Steam_CDN_Classical.yaml, interval: 28800}
-  Custom_Port_Direct: {type: http, behavior: classical, url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Port_Direct.yaml", path: ./ruleset/Custom_Port_Direct.yaml, interval: 28800}
+  Custom_Direct_Classical: {输入: http, behavior: classical, url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Direct_Classical.yaml", path: ./ruleset/Custom_Direct_Classical.yaml, interval: 28800}
+  Custom_Proxy_Classical: {输入: http, behavior: classical, url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Proxy_Classical.yaml", path: ./ruleset/Custom_Proxy_Classical.yaml, interval: 28800}
+  Steam_CDN_Classical: {输入: http, behavior: classical, url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Steam_CDN_Classical.yaml", path: ./ruleset/Steam_CDN_Classical.yaml, interval: 28800}
+  Custom_Port_Direct: {输入: http, behavior: classical, url: "https://testingcf.jsdelivr.net/gh/Aethersailor/Custom_OpenClash_Rules@main/rule/Custom_Port_Direct.yaml", path: ./ruleset/Custom_Port_Direct.yaml, interval: 28800}
 
 # 规则 / Rules
 # 规则顺序由上至下匹配，匹配即生效
