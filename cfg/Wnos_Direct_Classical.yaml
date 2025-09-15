@@ -18,3 +18,4 @@ payload:
   - DOMAIN,www.bing.com
   - DOMAIN,www4.bing.com
   - DOMAIN,lmlla.lmscunb.pro
+  - DOMAIN-SUFFIX,newapi.347363.xyz
