@@ -166,9 +166,8 @@
                 <span class="badge">Groq</span>
                 <span class="badge">Claude</span>
                 <span class="badge">Cohere</span>
+                <span class="badge">Cerebras</span>
                 <span class="badge">xAI</span>
-                <span class="badge">Mistral</span>
-                <span class="badge">Github</span>
                 <span class="badge">x666</span>
             </div>
             <div class="api-card">
@@ -210,23 +209,30 @@ curl ${base_url}/openai/v1/chat/completions \
                 <span>▼</span>
             </div>
             <div class="api-content" id="gemini">
-                <p>支持访问Google的 <a href="https://developers.googleblog.com/en/gemini-is-now-accessible-from-the-openai-library/" target="_blank">Gemini</a> 模型。使用方式与原生API完全一致。</p>
-                <h4>基础URL</h4>
+                <p>支持访问Google的 <a href="https://ai.google.dev/docs" target="_blank">Gemini</a> 模型。使用方式与原生API完全一致。</p>
+                <h4>基础URL (v1)</h4>
+                <div class="code-block">
+                    <button class="copy-button" onclick="copyCode(this)">复制</button>
+                    <code class="endpoint-url">${base_url}/gemini/v1/</code>
+                </div>
+                <h4>基础URL (v1beta)</h4>
                 <div class="code-block">
                     <button class="copy-button" onclick="copyCode(this)">复制</button>
                     <code class="endpoint-url">${base_url}/gemini/v1beta/</code>
                 </div>
+                <h4>示例代码 (v1beta)</h4>
                 <div class="code-block">
                     <button class="copy-button" onclick="copyCode(this)">复制</button>
                     <pre>
-curl ${base_url}/gemini/v1beta/chat/completions \
+curl ${base_url}/gemini/v1beta/models/gemini-pro:generateContent \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $GEMINI_API_KEY" \
+  -H "x-goog-api-key: $GEMINI_API_KEY" \
   -d '{
-    "model": "gemini-exp-1114",
-    "messages": [
-        {"role": "user", "content": "Explain to me how AI works"}
-    ]
+    "contents": [{
+      "parts":[{
+        "text": "Explain to me how AI works"
+      }]
+    }]
   }'</pre>
                 </div>
             </div>
@@ -244,6 +250,7 @@ curl ${base_url}/gemini/v1beta/chat/completions \
                     <button class="copy-button" onclick="copyCode(this)">复制</button>
                     <code class="endpoint-url">${base_url}/claude/v1/</code>
                 </div>
+                <h4>示例代码</h4>
                 <div class="code-block">
                     <button class="copy-button" onclick="copyCode(this)">复制</button>
                     <pre>
@@ -252,7 +259,7 @@ curl ${base_url}/claude/v1/messages \
   -H "x-api-key: $ANTHROPIC_API_KEY" \
   -H "anthropic-version: 2023-06-01" \
   -d '{
-    "model": "claude-3-5-sonnet-20241022",
+    "model": "claude-3-5-sonnet-20240620",
     "max_tokens": 1024,
     "messages": [{"role": "user", "content": "Hello!"}]
   }'</pre>
@@ -272,6 +279,7 @@ curl ${base_url}/claude/v1/messages \
                     <button class="copy-button" onclick="copyCode(this)">复制</button>
                     <code class="endpoint-url">${base_url}/groq/openai/v1/</code>
                 </div>
+                <h4>示例代码</h4>
                 <div class="code-block">
                     <button class="copy-button" onclick="copyCode(this)">复制</button>
                     <pre>
@@ -296,18 +304,46 @@ curl ${base_url}/groq/openai/v1/chat/completions \
                 <h4>基础URL</h4>
                 <div class="code-block">
                     <button class="copy-button" onclick="copyCode(this)">复制</button>
-                    <code class="endpoint-url">${base_url}/cohere/v2/</code>
+                    <code class="endpoint-url">${base_url}/cohere/v1/</code>
                 </div>
+                <h4>示例代码</h4>
                 <div class="code-block">
                     <button class="copy-button" onclick="copyCode(this)">复制</button>
                     <pre>
-curl ${base_url}/cohere/v2/chat \
+curl ${base_url}/cohere/v1/chat \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $COHERE_API_KEY" \
   -d '{
-    "model": "command-r-plus-08-2024",
-    "messages": [{"role": "user", "content": "Hello!"}],
+    "model": "command-r-plus",
+    "message": "Hello!",
     "stream": true
+  }'</pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="api-section">
+            <div class="api-header" onclick="toggleSection('cerebras')">
+                <h2>Cerebras API</h2>
+                <span>▼</span>
+            </div>
+            <div class="api-content" id="cerebras">
+                <p>支持访问 <a href="https://docs.cerebras.net/en/latest/api-reference/api-reference.html" target="_blank">Cerebras</a> 的模型，兼容 OpenAI API 格式。</p>
+                <h4>基础URL</h4>
+                <div class="code-block">
+                    <button class="copy-button" onclick="copyCode(this)">复制</button>
+                    <code class="endpoint-url">${base_url}/cerebras/v1/</code>
+                </div>
+                <h4>示例代码</h4>
+                <div class="code-block">
+                    <button class="copy-button" onclick="copyCode(this)">复制</button>
+                    <pre>
+curl ${base_url}/cerebras/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $CEREBRAS_API_KEY" \
+  -d '{
+    "model": "btlm-2-7b-chat",
+    "messages": [{"role": "user", "content": "Hello from Cerebras!"}]
   }'</pre>
                 </div>
             </div>
@@ -325,6 +361,7 @@ curl ${base_url}/cohere/v2/chat \
                     <button class="copy-button" onclick="copyCode(this)">复制</button>
                     <code class="endpoint-url">${base_url}/xai/v1/</code>
                 </div>
+                <h4>示例代码</h4>
                 <div class="code-block">
                     <button class="copy-button" onclick="copyCode(this)">复制</button>
                     <pre>
@@ -332,52 +369,24 @@ curl ${base_url}/xai/v1/chat/completions \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $XAI_API_KEY" \
   -d '{
-    "model": "grok-beta",
+    "model": "grok-1",
     "messages": [
           {
             "role": "system",
-            "content": "You are Grok, a chatbot inspired by the Hitchhikers Guide to the Galaxy."
+            "content": "You are Grok, a chatbot."
           },
           {
             "role": "user",
-            "content": "What is the meaning of life, the universe, and everything?"
+            "content": "What is the meaning of life?"
           }
         ],
-    "stream": true,
-    "temperature":0
-  }'</pre>
-                </div>
-            </div>
-        </div>
-
-        <div class="api-section">
-            <div class="api-header" onclick="toggleSection('mistral')">
-                <h2>Mistral API</h2>
-                <span>▼</span>
-            </div>
-            <div class="api-content" id="mistral">
-                <p>支持 <a href="https://docs.mistral.ai/api/" target="_blank">Mistral</a> 的各种模型。</p>
-                <h4>基础URL</h4>
-                <div class="code-block">
-                    <button class="copy-button" onclick="copyCode(this)">复制</button>
-                    <code class="endpoint-url">${base_url}/mistral/v1/</code>
-                </div>
-                <div class="code-block">
-                    <button class="copy-button" onclick="copyCode(this)">复制</button>
-                    <pre>
-curl ${base_url}/mistral/v1/chat/completions \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $MISTRAL_API_KEY" \
-  -d '{
-    "model": "mistral-small-latest",
-    "messages": [{"role": "user", "content": "Hello!"}],
     "stream": true
   }'</pre>
                 </div>
             </div>
         </div>
 
-        <div class="api-section"> <!-- Start of NEW x666 API section -->
+        <div class="api-section">
             <div class="api-header" onclick="toggleSection('x666')">
                 <h2>x666 API</h2>
                 <span>▼</span>
@@ -393,39 +402,12 @@ curl ${base_url}/mistral/v1/chat/completions \
                 <div class="code-block">
                     <button class="copy-button" onclick="copyCode(this)">复制</button>
                     <pre>
-curl ${base_url}/github/v1/chat/completions \
+curl ${base_url}/x666/v1/chat/completions \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $X666_API_KEY" \
   -d '{
     "model": "some-x666-model",
     "messages": [{"role": "user", "content": "Hello from x666!"}],
-    "stream": true
-  }'</pre>
-                </div>
-            </div>
-        </div> <!-- End of NEW x666 API section -->
-
-        <div class="api-section"> <!-- Start of existing section (renamed to Github) -->
-            <div class="api-header" onclick="toggleSection('github')">
-                <h2>Github API</h2>
-                <span>▼</span>
-            </div>
-            <div class="api-content" id="github">
-                <p>支持 Github Copilot API 服务。</p>
-                <h4>基础URL</h4>
-                <div class="code-block">
-                    <button class="copy-button" onclick="copyCode(this)">复制</button>
-                    <code class="endpoint-url">${base_url}/github/v1/</code>
-                </div>
-                <div class="code-block">
-                    <button class="copy-button" onclick="copyCode(this)">复制</button>
-                    <pre>
-curl ${base_url}/github/v1/chat/completions \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $GITHUB_API_KEY" \
-  -d '{
-    "model": "gpt-4o",
-    "messages": [{"role": "user", "content": "Hello!"}],
     "stream": true
   }'</pre>
                 </div>
@@ -436,15 +418,16 @@ curl ${base_url}/github/v1/chat/completions \
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const BASE_URL = 'https://pua.vercel.app';
-            const elements = document.querySelectorAll('code');
+            // 请将此处的 'your-deployment-url' 替换为你的实际部署域名
+            const BASE_URL = window.location.origin; 
+            const elements = document。querySelectorAll('code.endpoint-url, pre');
+            
             elements.forEach(element => {
-                element.innerText = element.innerText.replace('${base_url}', BASE_URL);
-            });
-
-            const codeBlocks = document.querySelectorAll('pre');
-            codeBlocks.forEach(block => {
-                block.innerHTML = block.innerHTML.replace('${base_url}', BASE_URL);
+                if (element。tagName === 'CODE') {
+                    element.innerText = element.innerText.replace('${base_url}', BASE_URL);
+                } else { // PRE
+                    element。innerHTML = element。innerHTML。替换(/\$\{base_url\}/g， BASE_URL);
+                }
             });
         });
 
@@ -453,24 +436,39 @@ curl ${base_url}/github/v1/chat/completions \
             const header = content.previousElementSibling;
             const arrow = header.querySelector('span');
             
-            content.classList.toggle('active');
-            arrow.textContent = content.classList.contains('active') ? '▲' : '▼';
+            content。classList。toggle('active');
+            arrow。textContent = content。classList。contains('active') ? '▲' : '▼';
         }
 
         function copyCode(button) {
-            const codeBlock = button.nextElementSibling;
-            const textArea = document.createElement('textarea');
-            textArea.value = codeBlock.textContent.trim();
-            document.body.appendChild(textArea);
-            textArea.select();
-            document.execCommand('copy');
-            document.body.removeChild(textArea);
+            const codeBlock = button.parentElement.querySelector('code, pre');
+            const textToCopy = codeBlock.textContent.trim();
             
-            const originalText = button.textContent;
-            button.textContent = '已复制!';
-            setTimeout(() => {
-                button.textContent = originalText;
-            }, 2000);
+            navigator。clipboard。writeText(textToCopy)。then(() => {
+                const originalText = button.textContent;
+                button。textContent = '已复制!';
+                setTimeout(() => {
+                    button.textContent = originalText;
+                }， 2000);
+            })。catch(err => {
+                console。error('无法复制: '， err);
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = textToCopy;
+                document.body.appendChild(textArea);
+                textArea.select();
+                try {
+                    document.execCommand('copy');
+                    const originalText = button.textContent;
+                    button.textContent = '已复制!';
+                    setTimeout(() => {
+                        button.textContent = originalText;
+                    }, 2000);
+                } catch (e) {
+                    console.error('Fallback复制失败: ', e);
+                }
+                document.body.removeChild(textArea);
+            });
         }
     </script>
 </body>
