@@ -33,6 +33,10 @@
             "dest": "https://x666.me/v1/$1"
         },
         {
+            "src": "/xmdbd/v1/(.*)",
+            "dest": "https://xmdbd.online/v1/$1"
+        },
+        {
             "src": "/cerebras/v1/(.*)",
             "dest": "https://api.cerebras.ai/v1/$1"
         
