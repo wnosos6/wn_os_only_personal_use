@@ -17,6 +17,5 @@ payload:
   - DOMAIN-SUFFIX,acgvideo.com
   - DOMAIN,www.bing.com
   - DOMAIN,www4.bing.com
-  - DOMAIN,lmlla.lmscunb.pro
   - DOMAIN-SUFFIX,newapi.347363.xyz
   - IP-CIDR,8.136.101.116/32
