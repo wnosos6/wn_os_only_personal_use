@@ -42,6 +42,10 @@
         
         },
         {
+            "src": "/elysia/v1/(.*)",
+            "dest": "https://elysia.h-e.top/$1"
+        },
+        {
             "src": "/xai/v1/(.*)",
             "dest": "https://api.x.ai/v1/$1"
         }
