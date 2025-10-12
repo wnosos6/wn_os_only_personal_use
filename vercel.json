@@ -50,6 +50,10 @@
             "dest": "https://api.nyxar.org/$1"
         },
         {
+            "src": "/voapi/v1/(.*)",
+            "dest": "https://demo.voapi.top/$1"
+        },
+        {
             "src": "/xai/v1/(.*)",
             "dest": "https://api.x.ai/v1/$1"
         }
