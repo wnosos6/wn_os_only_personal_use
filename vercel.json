@@ -46,6 +46,10 @@
             "dest": "https://elysia.h-e.top/$1"
         },
         {
+            "src": "/nyxar/v1/(.*)",
+            "dest": "https://api.nyxar.org/$1"
+        },
+        {
             "src": "/xai/v1/(.*)",
             "dest": "https://api.x.ai/v1/$1"
         }
