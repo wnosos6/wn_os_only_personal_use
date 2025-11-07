@@ -4,7 +4,6 @@ payload:
   - DOMAIN-KEYWORD,deeplx
   - DOMAIN-KEYWORD,bili
   - DOMAIN-KEYWORD,limestart
-  - DOMAIN-SUFFIX,linux.do
   - DOMAIN-SUFFIX,ap-northeast-1.clawcloudrun.com
   - DOMAIN-SUFFIX,bilibili.com
   - DOMAIN-SUFFIX,bilivideo.com
