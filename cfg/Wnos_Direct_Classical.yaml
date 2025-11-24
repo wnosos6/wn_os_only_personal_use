@@ -19,3 +19,4 @@ payload:
   - DOMAIN-SUFFIX,newapi.347363.xyz
   - DOMAIN-SUFFIX,newapi.wnos06.xyz
   - IP-CIDR,8.136.101.116/32
+  - DOMAIN-SUFFIX,linux.do
