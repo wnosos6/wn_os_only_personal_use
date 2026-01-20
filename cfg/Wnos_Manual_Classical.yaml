@@ -16,4 +16,5 @@ payload:
   - DOMAIN-SUFFIX,cdk.hybgzs.com
   - DOMAIN-SUFFIX,ai.hybgzs.com
   - DOMAIN-SUFFIX,dataverse.harvard.edu
-  - DOMAIN-SUFFIX,build.nvidia.com
+  - DOMAIN-SUFFIX,build.nvidia.com 
+  - DOMAIN-SUFFIX,xslist.org
