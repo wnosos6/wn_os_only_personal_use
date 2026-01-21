@@ -18,3 +18,6 @@ payload:
   - DOMAIN-SUFFIX,dataverse.harvard.edu
   - DOMAIN-SUFFIX,build.nvidia.com 
   - DOMAIN-SUFFIX,xslist.org
+  - DOMAIN-SUFFIX,njav.com
+  - DOMAIN-SUFFIX,avmiss.buzz
+  - DOMAIN-SUFFIX,disp.cc
