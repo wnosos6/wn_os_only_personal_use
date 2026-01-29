@@ -18,4 +18,5 @@ payload:
   - DOMAIN,www4.bing.com
   - DOMAIN-SUFFIX,newapi.347363.xyz
   - DOMAIN-SUFFIX,newapi.wnos06.xyz
+  - DOMAIN-SUFFIX,leaflow.net
   - IP-CIDR,8.136.101.116/32
