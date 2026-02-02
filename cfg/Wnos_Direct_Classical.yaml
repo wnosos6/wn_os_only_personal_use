@@ -20,5 +20,4 @@ payload:
   - DOMAIN-SUFFIX,newapi.wnos06.xyz
   - DOMAIN-SUFFIX,leaflow.net
   - DOMAIN-SUFFIX,checkin.leaflow.net
-  - DOMAIN-SUFFIX,taizi.api.51yp.de5.net
   - IP-CIDR,8.136.101.116/32
