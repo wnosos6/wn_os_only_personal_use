@@ -22,5 +22,7 @@ payload:
   - DOMAIN-SUFFIX,checkin.leaflow.net
   - DOMAIN-SUFFIX,elysia.h-e.top
   - DOMAIN-KEYWORD,hybgzs
-  - DOMAIN-SUFFIX, wnos06.xyz
+  - DOMAIN-SUFFIX,wnos06.xyz
+  - DOMAIN-SUFFIX,tv1.micu.hk
+  - DOMAIN-SUFFIX,tv.micu.hk
   - IP-CIDR,8.136.101.116/32
