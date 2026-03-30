@@ -28,3 +28,4 @@ payload:
   - DOMAIN-SUFFIX,grok.com
   - DOMAIN-SUFFIX,ldstore.cc.cd
   - DOMAIN-SUFFIX,code.claudex.us.ci
+  - DOMAIN-SUFFIX,media.micu.hk
