@@ -29,4 +29,4 @@ payload:
   - DOMAIN,tv1.micu.hk
   - DOMAIN,www4.bing.com
   - DOMAIN,cn.bing.com
-  - DOMAIN-SUFFIX,cdk.hybgzs.com
+  - DOMAIN-SUFFIX,hybgzs.com
