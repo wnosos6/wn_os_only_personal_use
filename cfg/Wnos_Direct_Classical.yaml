@@ -30,3 +30,4 @@ payload:
   - DOMAIN,www4.bing.com
   - DOMAIN,cn.bing.com
   - DOMAIN-SUFFIX,hybgzs.com
+  - DOMAIN,aihub.dog
